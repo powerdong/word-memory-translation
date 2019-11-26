@@ -1,7 +1,7 @@
 /*
  * @Author: Lambda
  * @Begin: 2019-11-18 15:57:45
- * @Update: 2019-11-18 16:07:18
+ * @Update: 2019-11-21 21:35:42
  * @Update log: 更新日志
  */
 const env = process.env.NODE_ENV // 环境参数（在package.json中的scripts中定义不同的环境变量）
@@ -14,7 +14,7 @@ if (env === 'dev') {
   MYSQL_CONF = {
     host: 'localhost',
     user: 'root',
-    password: '990608lhd',
+    password: '123456',
     port: '3306',
     database: 'wordsmemory'
   }
@@ -30,7 +30,7 @@ if (env === 'production') {
   MYSQL_CONF = {
     host: 'localhost',
     user: 'root',
-    password: '990608lhd',
+    password: '123456',
     port: '3306',
     database: 'wordsmemory'
   }

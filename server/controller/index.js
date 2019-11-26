@@ -1,7 +1,7 @@
 /*
  * @Author: Lambda
  * @Begin: 2019-11-18 16:12:54
- * @Update: 2019-11-18 17:14:46
+ * @Update: 2019-11-21 21:40:29
  * @Update log: 更新日志
  */
 const {
@@ -14,7 +14,6 @@ const xss = require('xss')
 const getAllWords = async (key) => {
   let sql = `select * from words where 1=1 `
   // 根据创建时间进行倒序排列
-  console.log(key)
   if (key) {
     sql += `and english like '%${key}%'`
   }
@@ -23,14 +22,15 @@ const getAllWords = async (key) => {
 }
 
 const writeWords = async (content) => {
+  console.log(content)
   const english = xss(content.english)
   const chinese = xss(content.chinese)
   const author = content.author
   const createTime = +new Date()
 
   let sql = `
-    insert into words (english, chinese, createTime, author)
-    values ('${english}', '${chinese}', '${createTime}', '${author}')
+    insert into words (english, chinese, author, createTime)
+    values ('${english}', '${chinese}', '${author}', '${createTime}')
   `
 
   const insertData = await exec(sql)

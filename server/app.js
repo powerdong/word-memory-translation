@@ -1,7 +1,7 @@
 /*
  * @Author: Lambda
  * @Begin: 2019-11-18 15:51:24
- * @Update: 2019-11-18 16:27:24
+ * @Update: 2019-11-26 21:51:06
  * @Update log: 更新日志
  */
 const Koa = require('koa')
@@ -21,6 +21,7 @@ const {
 } = require('../config/db')
 
 const index = require('./routes/index')
+const user = require('./routes/user')
 onerror(app)
 
 app.use(bodyparser({
@@ -72,6 +73,7 @@ app.use(session({
 }))
 
 app.use(index.routes(), index.allowedMethods())
+app.use(user.routes(), user.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
