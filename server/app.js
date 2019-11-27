@@ -1,7 +1,7 @@
 /*
  * @Author: Lambda
  * @Begin: 2019-11-18 15:51:24
- * @Update: 2019-11-26 21:51:06
+ * @Update: 2019-11-27 20:24:09
  * @Update log: 更新日志
  */
 const Koa = require('koa')
@@ -18,7 +18,7 @@ const morgan = require('koa-morgan')
 
 const {
   REDIS_CONF
-} = require('../config/db')
+} = require('./config/db')
 
 const index = require('./routes/index')
 const user = require('./routes/user')

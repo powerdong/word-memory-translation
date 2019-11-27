@@ -1,17 +1,17 @@
 /*
  * @Author: Lambda
  * @Begin: 2019-11-26 21:27:22
- * @Update: 2019-11-26 22:21:28
+ * @Update: 2019-11-27 20:24:41
  * @Update log: 更新日志
  */
 const {
   exec,
   escape
-} = require('../../mysql/mysql')
+} = require('../mysql/mysql')
 
 const {
   genPassword
-} = require('../../config/cryp')
+} = require('../config/cryp')
 
 
 const login = async (username, password) => {

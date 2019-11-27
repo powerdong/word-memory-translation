@@ -16,7 +16,7 @@ const {
 const {
   SuccessModel,
   ErrorModel
-} = require('../../config/resModel')
+} = require('../config/resModel')
 
 router.post('/login', async function (ctx, next) {
   const {

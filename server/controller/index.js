@@ -1,12 +1,12 @@
 /*
  * @Author: Lambda
  * @Begin: 2019-11-18 16:12:54
- * @Update: 2019-11-21 21:40:29
+ * @Update: 2019-11-27 20:24:30
  * @Update log: 更新日志
  */
 const {
   exec
-} = require('../../mysql/mysql')
+} = require('../mysql/mysql')
 
 const xss = require('xss')
 

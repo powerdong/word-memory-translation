@@ -1,7 +1,7 @@
 /*
  * @Author: Lambda
  * @Begin: 2019-11-18 15:56:52
- * @Update: 2019-11-18 17:26:43
+ * @Update: 2019-11-27 20:24:55
  * @Update log: 更新日志
  */
 const router = require('koa-router')()
@@ -16,7 +16,7 @@ const {
 const {
   SuccessModel,
   ErrorModel
-} = require('../../config/resModel')
+} = require('../config/resModel')
 
 router.get('/get', async (ctx, next) => {
   const key = ctx.query.key || ''
