@@ -6,7 +6,7 @@
  */
 import * as constants from './constants'
 
-export const add = (num) => ({
-  type: constants.ADD,
-  num
+export const setTitle = (title) => ({
+  type: constants.TITLE,
+  title
 })

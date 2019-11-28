@@ -1,7 +1,7 @@
 /*
  * @Author: Lambda
  * @Begin: 2019-11-27 20:49:11
- * @Update: 2019-11-27 22:09:18
+ * @Update: 2019-11-28 19:43:19
  * @Update log: 更新日志
  */
 import React, { Component } from 'react'
@@ -11,21 +11,21 @@ import { actionCreators } from './store'
 
 class Header extends Component {
   render() {
-    const { num, handleAdd } = this.props
-    return <HeaderWrapper onClick={() => handleAdd(5)}>{num}</HeaderWrapper>
+    const { title } = this.props
+    return <HeaderWrapper> {title} </HeaderWrapper>
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    num: state.getIn(['header', 'num'])
+    title: state.getIn(['header', 'title'])
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleAdd(num) {
-      dispatch(actionCreators.add(num))
+    setTitle(title) {
+      dispatch(actionCreators.setTitle(title))
     }
   }
 }

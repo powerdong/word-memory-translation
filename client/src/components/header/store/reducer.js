@@ -8,13 +8,13 @@ import { fromJS } from 'immutable'
 import * as constants from './constants'
 
 const initialState = fromJS({
-  num: 1
+  title: '单词记译小册'
 })
 
-export default (state = initialState, { type, num }) => {
+export default (state = initialState, { type, title }) => {
   switch (type) {
-    case constants.ADD:
-      return state.set('num', num)
+    case constants.TITLE:
+      return state.set('title', title)
     default:
       return state
   }
